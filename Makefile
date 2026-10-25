@@ -1,5 +1,5 @@
 # Advanced Multi-Source RAG — developer shortcuts
-.PHONY: help install samples index index-fast app ask eval test lint format docker docker-run clean
+.PHONY: help install samples index index-fast app ask eval test cov lint format assets docker docker-run clean
 
 PY ?= .venv/bin/python
 PIP ?= .venv/bin/pip
@@ -43,6 +43,10 @@ lint:              ## Lint with ruff
 
 format:            ## Auto-fix lint issues
 	$(PY) -m ruff check --fix src app scripts tests
+
+assets:            ## Regenerate README artwork (SVG diagrams, demo GIF, charts)
+	$(PY) scripts/generate_readme_assets.py
+	$(PY) scripts/render_demo_gif.py
 
 docker:            ## Build the Docker image
 	docker build -t enterprise-rag:latest .

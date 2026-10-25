@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 726" width="1240" height="726"
+     role="img" aria-label="Pipeline diagram: sources, ingestion, unified document DB, processing, three indexes, parallel retrieval, fusion, reranking, prompt construction, generation, cited response">
+  <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#070b16"/>
+    <stop offset="0.55" stop-color="#0b1223"/>
+    <stop offset="1" stop-color="#080d1a"/>
+  </linearGradient>
+  <radialGradient id="glowTeal" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#14b8a6" stop-opacity="0.55"/>
+    <stop offset="0.55" stop-color="#0d9488" stop-opacity="0.14"/>
+    <stop offset="1" stop-color="#0d9488" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="glowViolet" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#8b5cf6" stop-opacity="0.5"/>
+    <stop offset="0.55" stop-color="#7c3aed" stop-opacity="0.12"/>
+    <stop offset="1" stop-color="#7c3aed" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="glowBlue" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#3b82f6" stop-opacity="0.45"/>
+    <stop offset="1" stop-color="#2563eb" stop-opacity="0"/>
+  </radialGradient>
+  <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">
+    <path d="M44 0H0V44" fill="none" stroke="#1b2740" stroke-width="1"/>
+  </pattern>
+  <linearGradient id="titleFill" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#f1f5f9"/>
+    <stop offset="0.42" stop-color="#5eead4"/>
+    <stop offset="0.74" stop-color="#a78bfa"/>
+    <stop offset="1" stop-color="#60a5fa"/>
+    <animate attributeName="x1" values="0;0.25;0" dur="16s" repeatCount="indefinite"/>
+    <animate attributeName="x2" values="1;1.25;1" dur="16s" repeatCount="indefinite"/>
+  </linearGradient>
+</defs>
+  
+  <style>
+    text { font-family: Inter, 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif; }
+    .mono { font-family: 'JetBrains Mono', 'SF Mono', ui-monospace, 'DejaVu Sans Mono', Consolas, monospace; }
+    .bn { font-family: 'Noto Sans Bengali', 'Hind Siliguri', 'Mukti', 'Nirmala UI', 'Vrinda', 'Sölvesborg', sans-serif; }
+    @keyframes dash { to { stroke-dashoffset: -96; } }
+    @keyframes breathe { 0%,100% { opacity: .5; } 50% { opacity: 1; } }
+    .flow { stroke-dasharray: 9 9; animation: dash 2.6s linear infinite; }
+    .pulse { animation: breathe 6s ease-in-out infinite; }
+    .card { fill: #0d1526; stroke: #22314b; stroke-width: 1.2; }
+    .label { fill: #e8eefb; font-size: 15px; font-weight: 600; }
+    .sub { fill: #7d8cad; font-size: 11.5px; }
+    .stage { fill: #5eead4; font-size: 10.5px; font-weight: 700; letter-spacing: 1.4px; }
+  </style>
+
+  <rect width="1240" height="726" rx="18" fill="#070c17"/>
+  <rect width="1240" height="726" rx="18" fill="url(#grid)" opacity="0.26"/>
+  <circle cx="90" cy="60" r="260" fill="url(#glowTeal)" opacity="0.28"/>
+  <circle cx="1180" cy="700" r="280" fill="url(#glowViolet)" opacity="0.26"/>
+  <rect x="0.6" y="0.6" width="1238.8" height="724.8" rx="18" fill="none" stroke="#1e2c46"/>
+
+  <text x="48" y="32" font-size="11.5" letter-spacing="3.2" fill="#5eead4" font-weight="700">INGEST → INDEX → RETRIEVE → RERANK → GENERATE</text>
+  <text x="1192" y="32" font-size="11.5" fill="#7d8cad" text-anchor="end">advanced-multi-source-rag</text>
+
+  <g><rect class="card" x="48" y="56" width="258" height="104" rx="14"/><rect x="48" y="56" width="4" height="104" rx="2" fill="#5eead4" opacity="0.9"/><text class="stage" x="66" y="78" fill="#5eead4">01 · UI</text><text class="label" x="66" y="100">Streamlit chat + uploads</text><text class="sub" x="66" y="119">PDF · CSV · TXT/MD · URLs · questions</text></g><g><rect class="card" x="336" y="56" width="258" height="104" rx="14"/><rect x="336" y="56" width="4" height="104" rx="2" fill="#22d3ee" opacity="0.9"/><text class="stage" x="354" y="78" fill="#22d3ee">02 · INGESTION</text><text class="label" x="354" y="100">Loaders</text><text class="sub" x="354" y="119">PyMuPDF · pandas · trafilatura</text></g><g><rect class="card" x="624" y="56" width="258" height="104" rx="14"/><rect x="624" y="56" width="4" height="104" rx="2" fill="#38bdf8" opacity="0.9"/><text class="stage" x="642" y="78" fill="#38bdf8">03 · DOCUMENT DB</text><text class="label" x="642" y="100">Unified SQLite store</text><text class="sub" x="642" y="119">text · source · type · page · time</text></g><g><rect class="card" x="912" y="56" width="258" height="104" rx="14"/><rect x="912" y="56" width="4" height="104" rx="2" fill="#818cf8" opacity="0.9"/><text class="stage" x="930" y="78" fill="#818cf8">04 · PROCESSING</text><text class="label" x="930" y="100">Clean · chunk · tag</text><text class="sub" x="930" y="119">600 / 80 tokens · language · keywords</text></g><text x="321" y="113" font-size="17" fill="#3f5170" text-anchor="middle">›</text><text x="609" y="113" font-size="17" fill="#3f5170" text-anchor="middle">›</text><text x="897" y="113" font-size="17" fill="#3f5170" text-anchor="middle">›</text>
+  <g><rect class="card" x="48" y="226" width="360" height="104" rx="14"/><rect x="48" y="226" width="4" height="104" rx="2" fill="#2dd4bf" opacity="0.9"/><text class="stage" x="66" y="248" fill="#2dd4bf">06a · VECTOR INDEX</text><text class="label" x="66" y="270">FAISS · bge-m3</text><text class="sub" x="66" y="289">cosine · IndexFlatIP · persisted</text></g><g><rect class="card" x="440" y="226" width="360" height="104" rx="14"/><rect x="440" y="226" width="4" height="104" rx="2" fill="#a78bfa" opacity="0.9"/><text class="stage" x="458" y="248" fill="#a78bfa">06b · SENTENCE WINDOW</text><text class="label" x="458" y="270">window = 3</text><text class="sub" x="458" y="289">sentence hits + neighbour context</text></g><g><rect class="card" x="832" y="226" width="360" height="104" rx="14"/><rect x="832" y="226" width="4" height="104" rx="2" fill="#f59e0b" opacity="0.9"/><text class="stage" x="850" y="248" fill="#f59e0b">06c · GRAPH INDEX</text><text class="label" x="850" y="270">entities + relations</text><text class="sub" x="850" y="289">LLM triples → NetworkX → graph.json</text></g>
+  <g><rect class="card" x="48" y="390" width="1144" height="86" rx="14"/><rect x="48" y="390" width="4" height="86" rx="2" fill="#fbbf24"/><text class="stage" x="70" y="416" fill="#fbbf24">07 · MULTI-RETRIEVER</text><text class="label" x="70" y="442">Three retrievers in parallel — ThreadPoolExecutor · per-retriever timeout · failure isolation</text><text class="sub" x="70" y="462">vector ∥ sentence-window ∥ graph → Reciprocal Rank Fusion → dedupe by node id + normalised text → provenance merge</text><text class="sub" x="1170" y="416" fill="#8b9cc4" text-anchor="end">RRF k = 60</text></g>
+  <g><rect class="card" x="48" y="512" width="360" height="104" rx="14"/><rect x="48" y="512" width="4" height="104" rx="2" fill="#fbbf24" opacity="0.9"/><text class="stage" x="66" y="534" fill="#fbbf24">08 · RE-RANK</text><text class="label" x="66" y="556">Cross-encoder → top 5</text><text class="sub" x="66" y="575">bge-reranker-v2-m3 · relevance gate</text></g><g><rect class="card" x="440" y="512" width="360" height="104" rx="14"/><rect x="440" y="512" width="4" height="104" rx="2" fill="#f472b6" opacity="0.9"/><text class="stage" x="458" y="534" fill="#f472b6">09 · QUERY CONSTRUCTION</text><text class="label" x="458" y="556">Prompt + cited context</text><text class="sub" x="458" y="575">numbered [i] [file, p.N] blocks</text></g><g><rect class="card" x="832" y="512" width="360" height="104" rx="14"/><rect x="832" y="512" width="4" height="104" rx="2" fill="#fb7185" opacity="0.9"/><text class="stage" x="850" y="534" fill="#fb7185">10 · GENERATION</text><text class="label" x="850" y="556">Claude · OpenAI · Ollama</text><text class="sub" x="850" y="575">strictly grounded · retries · streaming</text></g><text x="424" y="569" font-size="17" fill="#3f5170" text-anchor="middle">›</text><text x="816" y="569" font-size="17" fill="#3f5170" text-anchor="middle">›</text>
+  <g><rect x="48" y="656" width="1144" height="62" rx="14" fill="#0b1a24" stroke="#2dd4bf" stroke-opacity="0.45"/><text class="stage" x="70" y="680" fill="#5eead4">RESPONSE</text><text class="label" x="70" y="704">Answer · bullet citations [file_name, page] · expandable sources with retriever + score</text><text class="sub" x="1170" y="704" fill="#fbbf24" text-anchor="end">no context → honest refusal</text></g>
+  <path id="r2-0" d="M1041 164 C 1041 208, 228 184, 228 220" fill="none" stroke="#8b9cc4" stroke-opacity="0.45" stroke-width="1.5" class="flow"/><path id="r2-1" d="M1041 164 C 1041 208, 620 184, 620 220" fill="none" stroke="#8b9cc4" stroke-opacity="0.45" stroke-width="1.5" class="flow"/><path id="r2-2" d="M1041 164 C 1041 208, 1012 184, 1012 220" fill="none" stroke="#8b9cc4" stroke-opacity="0.45" stroke-width="1.5" class="flow"/><path id="r3-0" d="M228 330 V384" fill="none" stroke="#fbbf24" stroke-opacity="0.45" stroke-width="1.5" class="flow"/><path id="r3-1" d="M620 330 V384" fill="none" stroke="#fbbf24" stroke-opacity="0.45" stroke-width="1.5" class="flow"/><path id="r3-2" d="M1012 330 V384" fill="none" stroke="#fbbf24" stroke-opacity="0.45" stroke-width="1.5" class="flow"/><path id="r4-0" d="M620 482 V506" fill="none" stroke="#fbbf24" stroke-opacity="0.45" stroke-width="1.5" class="flow"/><path id="r5-0" d="M620 616 V650" fill="none" stroke="#5eead4" stroke-opacity="0.45" stroke-width="1.5" class="flow"/><path id="r5-1" d="M1000 616 V650" fill="none" stroke="#5eead4" stroke-opacity="0.45" stroke-width="1.5" class="flow"/>
+  <circle r="3.3" fill="#8b9cc4"><animateMotion dur="3.2s" begin="0.0s" repeatCount="indefinite"><mpath href="#r2-0"/></animateMotion></circle><circle r="3.3" fill="#8b9cc4" opacity="0.3"><animateMotion dur="3.2s" begin="1.6s" repeatCount="indefinite"><mpath href="#r2-0"/></animateMotion></circle><circle r="3.3" fill="#8b9cc4"><animateMotion dur="3.2s" begin="0.5s" repeatCount="indefinite"><mpath href="#r2-1"/></animateMotion></circle><circle r="3.3" fill="#8b9cc4" opacity="0.3"><animateMotion dur="3.2s" begin="2.1s" repeatCount="indefinite"><mpath href="#r2-1"/></animateMotion></circle><circle r="3.3" fill="#8b9cc4"><animateMotion dur="3.2s" begin="1.0s" repeatCount="indefinite"><mpath href="#r2-2"/></animateMotion></circle><circle r="3.3" fill="#8b9cc4" opacity="0.3"><animateMotion dur="3.2s" begin="2.6s" repeatCount="indefinite"><mpath href="#r2-2"/></animateMotion></circle><circle r="3.3" fill="#fbbf24"><animateMotion dur="2.4s" begin="0.0s" repeatCount="indefinite"><mpath href="#r3-0"/></animateMotion></circle><circle r="3.3" fill="#fbbf24" opacity="0.3"><animateMotion dur="2.4s" begin="1.2s" repeatCount="indefinite"><mpath href="#r3-0"/></animateMotion></circle><circle r="3.3" fill="#fbbf24"><animateMotion dur="2.4s" begin="0.35s" repeatCount="indefinite"><mpath href="#r3-1"/></animateMotion></circle><circle r="3.3" fill="#fbbf24" opacity="0.3"><animateMotion dur="2.4s" begin="1.5s" repeatCount="indefinite"><mpath href="#r3-1"/></animateMotion></circle><circle r="3.3" fill="#fbbf24"><animateMotion dur="2.4s" begin="0.7s" repeatCount="indefinite"><mpath href="#r3-2"/></animateMotion></circle><circle r="3.3" fill="#fbbf24" opacity="0.3"><animateMotion dur="2.4s" begin="1.9s" repeatCount="indefinite"><mpath href="#r3-2"/></animateMotion></circle><circle r="3.3" fill="#fbbf24"><animateMotion dur="2.4s" begin="0.0s" repeatCount="indefinite"><mpath href="#r4-0"/></animateMotion></circle><circle r="3.3" fill="#fbbf24" opacity="0.3"><animateMotion dur="2.4s" begin="1.2s" repeatCount="indefinite"><mpath href="#r4-0"/></animateMotion></circle><circle r="3.3" fill="#5eead4"><animateMotion dur="2.4s" begin="0.0s" repeatCount="indefinite"><mpath href="#r5-0"/></animateMotion></circle><circle r="3.3" fill="#5eead4" opacity="0.3"><animateMotion dur="2.4s" begin="1.2s" repeatCount="indefinite"><mpath href="#r5-0"/></animateMotion></circle><circle r="3.3" fill="#5eead4"><animateMotion dur="2.4s" begin="0.4s" repeatCount="indefinite"><mpath href="#r5-1"/></animateMotion></circle><circle r="3.3" fill="#5eead4" opacity="0.3"><animateMotion dur="2.4s" begin="1.6s" repeatCount="indefinite"><mpath href="#r5-1"/></animateMotion></circle>
+</svg>
