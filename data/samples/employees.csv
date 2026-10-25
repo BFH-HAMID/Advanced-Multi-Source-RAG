@@ -1,0 +1,13 @@
+employee_id,name,department,role,location,manager,email,join_date,salary_band
+E001,Nusrat Jahan,People Operations,HR Director,Dhaka,Rafiq Ahmed,nusrat.jahan@acme.com.bd,2017-03-01,B5
+E002,Rafiq Ahmed,Executive,Chief Executive Officer,Dhaka,Board,rafiq.ahmed@acme.com.bd,2016-01-05,E1
+E003,Tanvir Hasan,Engineering,Head of Platform,Dhaka,Nusrat Jahan,tanvir.hasan@acme.com.bd,2018-07-16,D3
+E004,Sadia Islam,Engineering,Senior Data Engineer,Chattogram,Tanvir Hasan,sadia.islam@acme.com.bd,2020-02-10,C4
+E005,Mahmudul Karim,Security,Information Security Manager,Dhaka,Tanvir Hasan,mahmudul.karim@acme.com.bd,2019-11-03,D2
+E006,Fariha Chowdhury,Finance,Finance Manager,Dhaka,Rafiq Ahmed,fariha.chowdhury@acme.com.bd,2018-01-22,C5
+E007,Imran Hossain,Sales,Regional Sales Lead,Chattogram,Rafiq Ahmed,imran.hossain@acme.com.bd,2021-05-17,C3
+E008,Shirin Akter,People Operations,People Operations Partner,Dhaka,Nusrat Jahan,shirin.akter@acme.com.bd,2022-08-01,B3
+E009,Arif Mahmud,Support,Customer Support Lead,Chattogram,Imran Hossain,arif.mahmud@acme.com.bd,2020-09-14,B4
+E010,Mehjabin Rahman,Acme Labs,Research Scientist,Dhaka,Tanvir Hasan,mehjabin.rahman@acme.com.bd,2023-01-09,C4
+E011,Kamal Uddin,IT,IT Operations Engineer,Dhaka,Mahmudul Karim,kamal.uddin@acme.com.bd,2021-10-25,B3
+E012,Sumaiya Noor,Finance,Payroll Accountant,Dhaka,Fariha Chowdhury,sumaiya.noor@acme.com.bd,2022-04-11,B2

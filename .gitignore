@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Environment / secrets
+.env
+.env.local
+
+# Generated data (raw uploads, SQLite DB, indexes, reports)
+data/raw/*
+!data/raw/.gitkeep
+data/db/
+data/indexes/
+data/processed/*
+!data/processed/.gitkeep
+data/evaluation/*.json
+!data/evaluation/sample_testset.json
+data/evaluation/*.md
+
+# Caches
+.cache/
+.streamlit/secrets.toml
+
+# Editors / OS
+.idea/
+.vscode/
+.DS_Store
+*.log

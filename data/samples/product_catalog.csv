@@ -1,0 +1,7 @@
+product,category,price_bdt,support_window,sla_hours,description
+Atlas Analytics Suite,Analytics,450000,24x5,8,Self-service analytics platform with Bengali dashboards and governed data models
+Atlas Data Fabric,Data Platform,780000,24x7,4,Managed ingestion and catalog layer for multi-source enterprise data
+Nimbus OCR,Document AI,220000,24x5,8,Bangla and English OCR service for scanned documents and forms
+Nimbus Chat,Conversational AI,310000,24x7,4,Retrieval augmented assistant for internal knowledge bases
+Sentinel Compliance,Governance,190000,24x5,12,Policy and audit tracking with evidence collection workflows
+Mridul Vision,Computer Vision,260000,24x5,8,Quality inspection models for manufacturing lines

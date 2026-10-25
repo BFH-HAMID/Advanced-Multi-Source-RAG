@@ -1,0 +1,63 @@
+[
+  {
+    "question": "How many days of annual leave do employees get?",
+    "ground_truth": "Every permanent employee is entitled to 20 days of annual leave per calendar year.",
+    "source": "employee_handbook.pdf",
+    "language": "en"
+  },
+  {
+    "question": "What are the core working hours?",
+    "ground_truth": "Core working hours are 10:00 to 16:00 Bangladesh Standard Time, Monday to Thursday.",
+    "source": "employee_handbook.pdf",
+    "language": "en"
+  },
+  {
+    "question": "Who must approve expenses above BDT 10,000?",
+    "ground_truth": "Expenses above BDT 10,000 require prior approval from the reporting manager.",
+    "source": "employee_handbook.pdf",
+    "language": "en"
+  },
+  {
+    "question": "Where is Acme Cloud Services located and when was it launched?",
+    "ground_truth": "Acme Cloud Services was launched in 2019 and is based in Chattogram.",
+    "source": "company_overview.md",
+    "language": "en"
+  },
+  {
+    "question": "What is the daily travel per diem for Chattogram?",
+    "ground_truth": "The daily travel per diem is BDT 2,000 for Chattogram.",
+    "source": "employee_handbook.pdf",
+    "language": "en"
+  },
+  {
+    "question": "Which department does Sadia Islam work in and where is she based?",
+    "ground_truth": "Sadia Islam works in Engineering as a Senior Data Engineer and is based in Chattogram.",
+    "source": "employees.csv",
+    "language": "en"
+  },
+  {
+    "question": "বার্ষিক ছুটি কত দিন?",
+    "ground_truth": "প্রতি ক্যালেন্ডার বছরে প্রত্যেক স্থায়ী কর্মী ২০ দিন বার্ষিক ছুটি পাবেন।",
+    "source": "hr_policies_bangla.txt",
+    "language": "bn"
+  },
+  {
+    "question": "রিমোট কাজ সপ্তাহে কত দিন করা যায়?",
+    "ground_truth": "কর্মীরা সপ্তাহে সর্বোচ্চ ৩ দিন রিমোট কাজ করতে পারেন।",
+    "source": "hr_policies_bangla.txt",
+    "language": "bn"
+  },
+  {
+    "question": "শিক্ষা বাজেট কত টাকা?",
+    "ground_truth": "প্রতি কর্মীর জন্য বছরে ৫০,০০০ টাকার শিক্ষা বাজেট রয়েছে।",
+    "source": "hr_policies_bangla.txt",
+    "language": "bn"
+  },
+  {
+    "question": "What is the capital of France?",
+    "ground_truth": "The provided documents do not contain this information.",
+    "source": null,
+    "language": "en",
+    "unanswerable": true
+  }
+]
