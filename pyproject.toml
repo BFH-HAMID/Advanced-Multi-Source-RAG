@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "advanced-multi-source-rag"
+version = "1.0.0"
+description = "Advanced Multi-Source RAG for Enterprise Knowledge Base (Bangla + English)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Acme AI Engineering" }]
+keywords = ["rag", "llamaindex", "faiss", "knowledge-graph", "bangla", "bge-m3"]
+
+[tool.setuptools.packages.find]
+include = ["src*", "app*"]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-ra --strict-markers"
+filterwarnings = [
+    "ignore::DeprecationWarning",
+    "ignore::FutureWarning",
+]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+exclude = [".venv", "data", "docs"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "C4"]
+ignore = ["E501", "B008", "SIM108"]
+
+[tool.mypy]
+python_version = "3.11"
+warn_unused_ignores = false
+ignore_missing_imports = true
+check_untyped_defs = true
+exclude = ["tests", ".venv", "data"]
+
+[tool.coverage.run]
+source = ["src"]
+omit = ["src/evaluation/ragas_eval.py"]
